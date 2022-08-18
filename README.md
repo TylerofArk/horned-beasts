@@ -1,3 +1,5 @@
+<!-- This lab was done in collaboration with Daniel Awesome, Adriane Butler and Jose Gonzalez -->
+
 # Time Estimates:
 
 ## Feature 1: Display Images

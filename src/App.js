@@ -1,47 +1,55 @@
-// This lab was done in collaboration with Luis Rosales
-import Header from './Header.js';
-import Main from './Main.js';
-import Footer from './Footer.js';
-import SelectedBeast from "./SelectedBeast"
+// This lab was done in collaboration with Daniel Awesome, Adriane Butler and Jose Gonzalez
 import React from 'react';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import SelectedBeast from './SelectedBeast';
+import Data from './data.json';
+
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      show: false,
+      dataArray: Data,
+      filteredHorns: Data,
+      selectedBeast: {},
+      selectedHornValue: "All"
+    }
+  }
 
-	constructor(props)
-{
-	super(props);
-	this.state = {
-		show: false,
-		currentBeast: {title: "", imageUrl: "", description: ""}
-	};
+  openBeastModal = (name) => {
+    const selectedBeast = Data.find(beast => beast.title === name);
+    this.setState({selectedBeast, show:true});
+  }
+
+  // function for hide modal 
+  closeModal = () => {
+    this.setState({show:false});
+  }
+
+  render() {
+    return(
+      <div id="app">
+        <Header />
+
+
+        <Main 
+          dataArray={this.state.dataArray}
+          openBeastModal={this.openBeastModal}
+
+        />
+        <SelectedBeast
+                show={this.state.show}
+                closeModal={this.closeModal}
+                selectedBeast={this.state.selectedBeast}
+        />
+        <Footer />
+      </div>
+    );
+  }
 }
 
-handleOpenModal = (title, imageUrl, description) =>
-{
-	this.setState({show: true, currentBeast: {title: title, imageUrl: imageUrl, description: description}});
-};
-
-handleCloseModal = () =>
-{
-	this.setState({show: false, currentBeast: this.state.currentBeast});
-};
-
-render () {
-  return (
-    <div className="App">
-			<Header />
-
-			<Main />
-					openBeastModal={this.openBeastModal}
-
-			<SelectedBeast />
-					show={this.state.show}
-          closeModal={this.closeModal}
-          selectedBeast={this.state.selectedBeast}
-
-			<Footer />
-    </div>
-  );
- }
-}
 export default App;

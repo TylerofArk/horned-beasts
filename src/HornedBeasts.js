@@ -1,5 +1,4 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
@@ -12,7 +11,10 @@ class HornedBeast extends React.Component {
 
 		addVote = () => {
 			this.setState({clicked: this.state.clicked + 1});
-			this.props.handler(this.props.title, this.props.imageURL, this.props.description);
+		}
+
+		handleImageClick = () => {
+			this.props.openModal(this.props.title, this.props.imageURL, this.props.description);
 		}
 
 	render() {

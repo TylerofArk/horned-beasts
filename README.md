@@ -4,35 +4,35 @@
 
 ## Feature 1: Display Images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2
 
-Start time: _____
+Start time: 2pm
 
-Finish time: _____
+Finish time: 4pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2
 
 -------------
 
 ## Feature 2: Allow users to vote for their favorite beast
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2.5
 
-Start time: _____
+Start time: 1:45pm
 
-Finish time: _____
+Finish time: 4:45pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3
 
-## Feature 3: Bootstrap
+## Feature 3: Modal
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1.5hrs
 
-Start time: _____
+Start time: 2:30
 
-Finish time: _____
+Finish time: 7:20
 
-Actual time needed to complete: _____
+Actual time needed to complete: almost 5 hours
 
 ## Feature 4: 
 

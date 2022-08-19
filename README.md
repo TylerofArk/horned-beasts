@@ -34,15 +34,15 @@ Finish time: 7:20
 
 Actual time needed to complete: almost 5 hours
 
-## Feature 4: 
+## Feature 4: Filter
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 3
 
-Start time: _____
+Start time: 2pm
 
-Finish time: _____
+Finish time: 10pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: Worked off and on for 8 hours to get to current point
 
 ## Feature 5: 
 

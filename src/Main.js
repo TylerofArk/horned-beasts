@@ -14,11 +14,12 @@ class Main extends React.Component {
 				{
 					data.map((beast) =>
 					(<div key={beast._id}>
-						<HornedBeast _id = {beast._id} imageUrl={beast.image_url} title={beast.title} description={beast.description} keyword = {beast.keyword} horns = {beast.horns} />
+						<HornedBeast _id = {beast._id} imageUrl={beast.image_url} title={beast.title} description={beast.description} keyword = {beast.keyword} horns = {beast.horns} handleOpen={() =>this.props.openModal(beast)}/>
 						</div>
 					))}
 
 </div>
+
 		)
 	}
 }

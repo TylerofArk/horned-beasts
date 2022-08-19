@@ -1,6 +1,7 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 
+
 class HornedBeast extends React.Component {
 
 	constructor(props)
@@ -14,13 +15,15 @@ class HornedBeast extends React.Component {
 		}
 
 		handleImageClick = () => {
-			this.props.openModal(this.props.title, this.props.imageURL, this.props.description);
+			this.addVote()
+			this.props.handleOpen()
 		}
+
 
 	render() {
 		return (
 			<Card className="horned-beast">
-				<Card.Img onClick={this.addVote} variant="top" src={this.props.imageUrl} alt={this.props.description}
+				<Card.Img onClick={this.handleImageClick} variant="top" src={this.props.imageUrl} alt={this.props.description}
 				          title={this.props.title}/>
 				<Card.Body>
 					<Card.Title>{this.props.title} ❤️{this.state.clicked}</Card.Title>

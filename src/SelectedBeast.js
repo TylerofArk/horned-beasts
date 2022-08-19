@@ -9,7 +9,7 @@ class SelectedBeast extends React.Component {
 
       <div id="beast-modal">
         <Modal
-          show={this.props.show}
+          show={this.props.showModal}
           onHide={this.props.closeModal}
                    
         >
@@ -19,7 +19,7 @@ class SelectedBeast extends React.Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <img src={this.props.selectedBeast.image_url} alt={this.props.selectedBeast.description} title={this.props.selectedBeast.title}/>
+            <img width={480} src={this.props.selectedBeast.image_url} alt={this.props.selectedBeast.description} title={this.props.selectedBeast.title}/>
             <p>{this.props.selectedBeast.description}</p>
           </Modal.Body>
           <Modal.Footer>

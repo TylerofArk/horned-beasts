@@ -37,14 +37,17 @@ class App extends React.Component {
 		let horns = e.target.value
 		if (horns === 'all'){
 			this.setState({dataArray:Data})
-		} else if (horns === 'many') {
-			let filteredData = Data.filter(x => x.horns > 3)
+		} else if (horns === '3') {
+			let filteredData = Data.filter(x => x.horns === 3)
 			this.setState({dataArray: filteredData})
-		} else { let parsedHorns = parseInt(horns)
-			let filteredData = Data.filter(x => x.horns === parsedHorns)
+		} else if (horns === '2') {
+			let filteredData = Data.filter(x => x.horns === 2)
+			this.setState({dataArray: filteredData})
+		} else {
+			let filteredData = Data.filter(x => x.horns === 1)
 			this.setState({dataArray: filteredData})
 		}
-	}
+	};
 
 
   render() {
@@ -57,9 +60,9 @@ class App extends React.Component {
               name="select"
               onChange={this.handleSelect}>
               <option value="all">All Horned Beasts</option>
-              <option value="many">Beasts with more than 3 horns</option>
-              <option value={2}>Beasts with 2 horns</option>
-              <option value={1}>Beasts with 1 horn</option>
+              <option value='3'>Beasts with more than 3 horns</option>
+              <option value='2'>Beasts with 2 horns</option>
+              <option value='1'>Beasts with 1 horn</option>
             </Form.Select>
           </Form>
 
